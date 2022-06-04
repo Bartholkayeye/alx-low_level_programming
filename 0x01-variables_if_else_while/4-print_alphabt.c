@@ -1,21 +1,21 @@
-#inclure <stdio.h>
+#include <stdio.h>
 
 /**
- * main - Imprime l’alphabet en minuscules, à l’exception de q et e.
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
- * Retour: Toujours 0.
+ * Return: Always 0.
  */
 int main(void)
 {
-	lettre char;
+	char letter;
 
-	for (lettre = 'a'; lettre <= 'z'; lettre++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		if (lettre != 'e' && lettre != 'q')
-			putchar(lettre);
+		if (letter != 'e' && letter != 'q')
+			putchar(letter);
 	}
 
 	putchar('\n');
 
-	retour (0);
+	return (0);
 }
