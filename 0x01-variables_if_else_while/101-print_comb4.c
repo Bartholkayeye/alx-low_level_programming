@@ -1,34 +1,28 @@
 #include <stdio.h>
-
 /**
- * main - Function
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
-	int d1, d2, d3
-
-	for (d1 = 0; d1 < 8; d1++)
-	{
-		for (d2 = d1 + 1; d2 < 9; d2++)
-		{
-			for (d3 = d2 + 1; d3 < 10; d3++)
-			{
-				putchar((d1 % 10) + '0');
-				putchar((d2 % 10) + '0');
-				putchar((d3 % 10) + '0');
-
-				if (d1 == 7 && d2 == 8 && d3 == 9)
-					continue;
-
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-
-	putchar('\n');
-
-	return (0);
+int n1, nu2, n3;
+for (n1 = 0; n1 < 8; n1++)
+{
+for (n2 = n1 + 1; n2 < 9; n2++)
+{
+for (n3 = n2 + 1; n3 < 10; n3++)
+{
+putchar((n1 % 10) + '0');
+putchar((n2 % 10) + '0');
+putchar((n3 % 10) + '0');
+if (n1 == 7 && n2 == 8 && n3 == 9)
+continue;
+putchar(',');
+putchar(' ');
+}
+}
+}
+putchar('\n');
+return (0);
 }
