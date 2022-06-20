@@ -7,22 +7,24 @@
  *
  * Return: void
  */
-
+	
 void print_diagsums(int *a, int size)
 {
-	int i, j;
-	int c = 0;
-	int d = 0;
+	int i, sum1 = 0, sum2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		c = c + *(a + i * sizeof(int));
+		sum1 += a[i];
+		a += size;
 	}
 
-	for (j = 0; j < size; j++)
+	a -= size;
 
+	for (i = 0; i < size; i++)
 	{
-		d = d + *(a + (size * j) + (size - j - 1));
+		sum2 += a[i];
+		a -= size;
 	}
-	printf("%d, %d\n", c, d);
+
+	printf("%d, %d\n", sum1, sum2);
 }
