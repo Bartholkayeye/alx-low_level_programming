@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -9,23 +10,22 @@
 	
 void print_diagsums(int *a, int size)
 {
-	int b = 0;
-	int val = 0;
+	int i;
 	int sum1, sum2;
 
-	sum1 = sum2 = 0;
-	while (b < (size * size))
+	sum1 = 0;
+	sum2 = 0;
+
+	i = 0;
+	while (i < size) 
 	{
-		val = *(a + b);
-		sum1 = sum1 + val;
-		b = b + size + 1;
+		
+		sum1 = sum1 + *(a + i * size + i);
+		sum2 = sum2 + *(a + i * size + size - i - 1);
+
+		i++; /*add +1*/
 	}
-	b = size - 1;
-	while (b < ((size * size) - 1))
-	{
-		val = *(a + b);
-		sum2 = sum2 + val;
-		b = b + (size - 1);
-	}
-	printf("%d, %d\n", sum1, sum2);
+
+	printf("%i, %i\n", sum1, sum2);
+
 }
