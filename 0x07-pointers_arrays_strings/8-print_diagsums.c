@@ -10,16 +10,13 @@
 	
 void print_diagsums(int *a, int size)
 {
-	int  m;
-	int j = size - 1;
-	int diagright = 0;
-	int diagleft = 0;
+	int i;
+	unsigned int sum = 0, sum1 = 0;
 
-	for (m = 0; m < (size * size);
-	     m = m + (size + 1), j = j + (size - 1))
+	for (i = 0; i < size; i++)
 	{
-		diagleft += a[m];
-		diagright += a[j];
+		sum += a[(size * i) + i];
+		sum1 += a[(size * (i + 1)) - (i + 1)];
 	}
-	printf("%i, %i\n", diagleft, diagright);
+	printf("%d, %d\n", sum, sum1);
 }
