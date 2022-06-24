@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - adds positive numbers
+ * main - the minimum number of coins to make change for an amount of money.
  * @argv: array of pointers to strings
  * @argc: argument count
  *
